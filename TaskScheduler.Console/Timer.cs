@@ -11,7 +11,7 @@
             while (true)
             {
                 Scheduler_RRP.Schedule();
-                Thread.Sleep(TimeSlice * 100);
+                //Thread.Sleep(TimeSlice * 100);
             }
         }).Start();
 
@@ -20,7 +20,7 @@
             while(true)
             {
                 Scheduler_EDF.Schedule();
-                Thread.Sleep(100);
+                //Thread.Sleep(100);
             }
         }).Start();
     }

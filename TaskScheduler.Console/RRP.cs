@@ -41,9 +41,11 @@ namespace TaskScheduler.Console
                         CurrentTask.RemainingTime -= ExecuteTime;
                         CurentTime += ExecuteTime;
                         WindowConsole.WriteLine($"Time {CurentTime}: Task {CurrentTask.Id} of Priority {CurrentTask.Priority} is Executing...");
-                    
-                        if(CurrentTask.RemainingTime > 0)
+
+                        if (CurrentTask.RemainingTime > 0)
                             ReadyQueues[i].Enqueue(CurrentTask);
+                        else
+                            WindowConsole.WriteLine("Dead");
                     }
                 }
 

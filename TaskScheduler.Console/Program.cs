@@ -26,7 +26,10 @@ class Program
             RunWithCode(Scheduler_RRP, Scheduler_EDF);
 
         SimulationTimer TimerSimulation = new(10, Scheduler_RRP, Scheduler_EDF);
+        Console.WriteLine("Running RRP......");
         TimerSimulation.StartRRP();
+        Console.ReadKey();
+        Console.WriteLine("Running EDF......");
         TimerSimulation.StartEDF();
     }
 
